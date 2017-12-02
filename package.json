@@ -1,0 +1,23 @@
+{
+  "name": "mad",
+  "version": "0.0.0-development",
+  "main": "index.js",
+  "repository": "https://github.com/YsnKsy/mad.git",
+  "author": "Yassine Kassy",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "semantic-release": "^8.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
