@@ -1,23 +1,45 @@
 {
   "name": "mad",
   "version": "0.0.0-development",
-  "main": "index.js",
   "repository": "https://github.com/YsnKsy/mad.git",
   "author": "Yassine Kassy",
   "license": "MIT",
   "private": false,
   "scripts": {
+    "start": "babel-node src",
+    "test": "eslint src && flow && jest --coverage",
+    "build": "babel src/ -d lib/",
+    "precommit": "yarn test",
+    "prepush": "yarn test",
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-compat": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.60.1",
+    "husky": "^0.14.3",
+    "jest": "^21.2.1",
     "semantic-release": "^8.2.0"
   },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "browserslist": [
+    "> 1%"
+  ]
 }
