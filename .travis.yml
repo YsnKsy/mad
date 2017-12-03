@@ -6,7 +6,7 @@ notifications:
   email: false
 node_js:
   - '8'
-script: yarn install && flow-typed install && yarn test && yarn build && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+script: yarn install && flow-typed install && yarn test && yarn build
 after_success:
   - npm run semantic-release
 branches:
