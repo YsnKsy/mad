@@ -4,6 +4,6 @@
 
 import Mad from './mad'
 
-const mad = new Mad('Dirham')
+const mad: Mad = new Mad(10, 'mad')
 
-console.log(mad.test())
+console.log(mad.to('centime'))

@@ -1,6 +1,12 @@
 [ignore]
 .*/node_modules/.*
-.*/__tests__/*.js
+.*/__tests__/.*
+.*/lib/.*
+.*/flow/.*
+.*/lib/.*
+
+[libs]
+.*/flow-typed/.*
 
 [options]
 suppress_comment= \\(.\\|\n\\)*\\flow-disable-next-line
